@@ -1,0 +1,13 @@
+C:\Users\sick\Desktop\SCHOOL YEAR 3\CPSC 1012\assignments\2021-JAN-CPSC1012-ClassDemo-AO3\First Sample Solution\First Sample Solution\bin\Debug\netcoreapp3.1\First Sample Solution.exe
+C:\Users\sick\Desktop\SCHOOL YEAR 3\CPSC 1012\assignments\2021-JAN-CPSC1012-ClassDemo-AO3\First Sample Solution\First Sample Solution\bin\Debug\netcoreapp3.1\First Sample Solution.deps.json
+C:\Users\sick\Desktop\SCHOOL YEAR 3\CPSC 1012\assignments\2021-JAN-CPSC1012-ClassDemo-AO3\First Sample Solution\First Sample Solution\bin\Debug\netcoreapp3.1\First Sample Solution.runtimeconfig.json
+C:\Users\sick\Desktop\SCHOOL YEAR 3\CPSC 1012\assignments\2021-JAN-CPSC1012-ClassDemo-AO3\First Sample Solution\First Sample Solution\bin\Debug\netcoreapp3.1\First Sample Solution.runtimeconfig.dev.json
+C:\Users\sick\Desktop\SCHOOL YEAR 3\CPSC 1012\assignments\2021-JAN-CPSC1012-ClassDemo-AO3\First Sample Solution\First Sample Solution\bin\Debug\netcoreapp3.1\First Sample Solution.dll
+C:\Users\sick\Desktop\SCHOOL YEAR 3\CPSC 1012\assignments\2021-JAN-CPSC1012-ClassDemo-AO3\First Sample Solution\First Sample Solution\bin\Debug\netcoreapp3.1\First Sample Solution.pdb
+C:\Users\sick\Desktop\SCHOOL YEAR 3\CPSC 1012\assignments\2021-JAN-CPSC1012-ClassDemo-AO3\First Sample Solution\First Sample Solution\obj\Debug\netcoreapp3.1\First Sample Solution.csprojAssemblyReference.cache
+C:\Users\sick\Desktop\SCHOOL YEAR 3\CPSC 1012\assignments\2021-JAN-CPSC1012-ClassDemo-AO3\First Sample Solution\First Sample Solution\obj\Debug\netcoreapp3.1\First Sample Solution.AssemblyInfoInputs.cache
+C:\Users\sick\Desktop\SCHOOL YEAR 3\CPSC 1012\assignments\2021-JAN-CPSC1012-ClassDemo-AO3\First Sample Solution\First Sample Solution\obj\Debug\netcoreapp3.1\First Sample Solution.AssemblyInfo.cs
+C:\Users\sick\Desktop\SCHOOL YEAR 3\CPSC 1012\assignments\2021-JAN-CPSC1012-ClassDemo-AO3\First Sample Solution\First Sample Solution\obj\Debug\netcoreapp3.1\First Sample Solution.csproj.CoreCompileInputs.cache
+C:\Users\sick\Desktop\SCHOOL YEAR 3\CPSC 1012\assignments\2021-JAN-CPSC1012-ClassDemo-AO3\First Sample Solution\First Sample Solution\obj\Debug\netcoreapp3.1\First Sample Solution.dll
+C:\Users\sick\Desktop\SCHOOL YEAR 3\CPSC 1012\assignments\2021-JAN-CPSC1012-ClassDemo-AO3\First Sample Solution\First Sample Solution\obj\Debug\netcoreapp3.1\First Sample Solution.pdb
+C:\Users\sick\Desktop\SCHOOL YEAR 3\CPSC 1012\assignments\2021-JAN-CPSC1012-ClassDemo-AO3\First Sample Solution\First Sample Solution\obj\Debug\netcoreapp3.1\First Sample Solution.genruntimeconfig.cache
