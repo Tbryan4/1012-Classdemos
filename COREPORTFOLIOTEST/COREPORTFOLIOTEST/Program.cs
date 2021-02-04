@@ -6,9 +6,58 @@ namespace COREPORTFOLIOTEST
     {
         static void Main(string[] args)
         {
-            //Create a new C# Console App project named as CorePortfolio01-YourName that reads an estimated flight time and an actual flight time and then print 
-            //whether the estimate time is too large, acceptable, or too small. If the estimated flight time is too large or too small, the program should also
-            //print the amount of the overestimate or underestimate. 
+            /*
+           
+            Purpose: 
+            
+            Create a new C# Console App that reads an estimated flight time and an actual flight time and then print whether the estimate time is too
+            large, acceptable, or too small. If the estimated flight time is too large or too small, the program should also print the amount of the overestimate or underestimate. 
+            whether the estimate time is too large, acceptable, or too small. If the estimated flight time is too large or too small, the program should also
+            print the amount of the overestimate or underestimate. 
+
+            Input:
+            
+            User inputs two numerical values for flight estimate and actual time of a flight. The program will take these values and find a respective margin of error 
+            dependent of the two values they inputted. 
+
+            Process:
+
+            0. Strings, Doubles are declared using camel casing because they are variables
+            1. The user will input two numerical values for flight estimate and actual.
+            2. After the user inputs two values the program will look for an applicable if statement to use (range extends from 0 - infinity). Each range has a respective Margin of error.
+            3. Once the program finds the applicable if statement the program will begin checking if the numbers are over estimates, under estimates , or acceptable estimate.
+            4. The program is split into two sections: Small Estimate, and Large estimate.
+            5. if the program detects that the (flightEstimate <= flightActual) the small estimate path will begin,.
+            6. the small path has two calculations (flightTimeCalculation, flightTimeCalculation2).
+            7. First the flightTimeCalculation takes the flight estimate and adds the respective margin error .
+            8. Then flightTimeCalculation2 takes the the flightActual and subtracts the flightTimeCalculation.
+            9. then the program checks if the flightTimeCalculaton is smaller then the margin of error.
+            10. if flightTimeCalculation2 < respective MOE (or any numbers that are less that are less then moe excluding negative values) then the console writes that the Estimated time is acceptable and changes Same number to 1 instead of 0
+            11. Same number makes sure that the prompt "Estimated time is acceptable" doesn't display twice for the large estimate path.
+            12. if not the program will display how short the estimate was compared to the actual flight time.
+            13. The large path is chosen if the small path is not chosen.
+            14. The large path checks if (flightEstimate >= flightActual) for respective estimates and actuals.
+            15. Then the Large path will calculate:  flightTimeCalculation = (flightEstimate - flightActual).
+            16. Then flightTimeCalculation2 = (flightTimeCalculation - (respective MOE).
+            17. Then if (flightTimeCalculation2 < ROE or any numbers that are less that are less then moe including negative values && sameNumber == 0) display Estimated time is acceptable (samenumber = 0 means that the "Estimated time is acceptable" has not been displayed before).
+            18. if not the program will display how Large the estimate was compared to the actual flight time.
+            19. This process repeats and works for every value tested.
+
+            Output:
+
+            This program can output 3 possible results:
+
+            1. Estimated time is acceptable
+
+            2. Estimated time too small by {x} minutes
+
+            3. Estimated time too large by {x} minutes
+
+            Author: Tylen Bryan
+
+            last modified date: February 7, 2020
+
+            */
 
             string flightTime;
             double flightEstimate;
@@ -16,9 +65,6 @@ namespace COREPORTFOLIOTEST
             double flightTimeCalculation;
             double flightTimeCalculation2;
             double sameNumber = 0;
-
-            //same number stops "estimated time is acceptable from dispplaying twice
-
 
             Console.WriteLine("Flight Time Estimate \n");
 
@@ -33,16 +79,15 @@ namespace COREPORTFOLIOTEST
             flightActual = double.Parse(flightTime);
 
             //small path
-
   
-            if (flightEstimate <= 29 && flightEstimate <= flightActual) // if flight estimate is <= 29 & flightEstimate is <= Flight Actual. 
+            if (flightEstimate <= 29 && flightEstimate <= flightActual) 
             {
                 flightTimeCalculation = (flightEstimate + 1);
                 flightTimeCalculation2 = (flightActual - flightTimeCalculation);
 
-                if (flightTimeCalculation2 < 1) // This means estimated time is acceptable
+                if (flightTimeCalculation2 < 1) 
                 {
-                    sameNumber = 1; // Same number gets rid of estimated time is acceptable
+                    sameNumber = 1; 
                     Console.WriteLine($"\nEstimated time is acceptable");
                 }
                 else
@@ -59,7 +104,7 @@ namespace COREPORTFOLIOTEST
                 flightTimeCalculation = (flightEstimate + 2);
                 flightTimeCalculation2 = (flightActual - flightTimeCalculation);
 
-                if (flightActual - flightEstimate == 2 || flightActual - flightEstimate == 1 || flightActual - flightEstimate == 0) // This means that if there is a difference between fa and fe of 2 or less its an acceptable path
+                if (flightActual - flightEstimate == 2 || flightActual - flightEstimate == 1 || flightActual - flightEstimate == 0) 
 
                 {
                     sameNumber = 1;
@@ -79,7 +124,7 @@ namespace COREPORTFOLIOTEST
                 flightTimeCalculation = (flightEstimate + 3);
                 flightTimeCalculation2 = (flightActual - flightTimeCalculation);
 
-                if (flightActual - flightEstimate == 3 || flightActual - flightEstimate == 2 || flightActual - flightEstimate == 1 || flightActual - flightEstimate == 0) // This means that if there is a difference between fa and fe of 2 or less its an acceptable path
+                if (flightActual - flightEstimate == 3 || flightActual - flightEstimate == 2 || flightActual - flightEstimate == 1 || flightActual - flightEstimate == 0) 
 
                 {
                     sameNumber = 1;
@@ -99,7 +144,7 @@ namespace COREPORTFOLIOTEST
                 flightTimeCalculation = (flightEstimate + 4);
                 flightTimeCalculation2 = (flightActual - flightTimeCalculation);
 
-                if (flightActual - flightEstimate == 4 ||flightActual - flightEstimate == 3 || flightActual - flightEstimate == 2 || flightActual - flightEstimate == 1 || flightActual - flightEstimate == 0) // This means that if there is a difference between fa and fe of 2 or less its an acceptable path
+                if (flightActual - flightEstimate == 4 ||flightActual - flightEstimate == 3 || flightActual - flightEstimate == 2 || flightActual - flightEstimate == 1 || flightActual - flightEstimate == 0) 
 
                 {
                     sameNumber = 1;
@@ -119,7 +164,7 @@ namespace COREPORTFOLIOTEST
                 flightTimeCalculation = (flightEstimate + 6);
                 flightTimeCalculation2 = (flightActual - flightTimeCalculation);
 
-                if (flightActual - flightEstimate == 6 || flightActual - flightEstimate == 5 || flightActual - flightEstimate == 4 || flightActual - flightEstimate == 3 || flightActual - flightEstimate == 2 || flightActual - flightEstimate == 1 || flightActual - flightEstimate == 0) // This means that if there is a difference between fa and fe of 2 or less its an acceptable path
+                if (flightActual - flightEstimate == 6 || flightActual - flightEstimate == 5 || flightActual - flightEstimate == 4 || flightActual - flightEstimate == 3 || flightActual - flightEstimate == 2 || flightActual - flightEstimate == 1 || flightActual - flightEstimate == 0) 
 
                 {
                     sameNumber = 1;
@@ -139,7 +184,7 @@ namespace COREPORTFOLIOTEST
                 flightTimeCalculation = (flightEstimate + 8);
                 flightTimeCalculation2 = (flightActual - flightTimeCalculation);
 
-                if (flightActual - flightEstimate == 8 || flightActual - flightEstimate == 7 || flightActual - flightEstimate == 6 || flightActual - flightEstimate == 5 || flightActual - flightEstimate == 4 || flightActual - flightEstimate == 3 || flightActual - flightEstimate == 2 || flightActual - flightEstimate == 1 || flightActual - flightEstimate == 0) // This means that if there is a difference between fa and fe of 2 or less its an acceptable path
+                if (flightActual - flightEstimate == 8 || flightActual - flightEstimate == 7 || flightActual - flightEstimate == 6 || flightActual - flightEstimate == 5 || flightActual - flightEstimate == 4 || flightActual - flightEstimate == 3 || flightActual - flightEstimate == 2 || flightActual - flightEstimate == 1 || flightActual - flightEstimate == 0) 
 
                 {
                     sameNumber = 1;
@@ -158,7 +203,7 @@ namespace COREPORTFOLIOTEST
                 flightTimeCalculation = (flightEstimate + 13);
                 flightTimeCalculation2 = (flightActual - flightTimeCalculation);
 
-                if (flightActual - flightEstimate == 13 || flightActual - flightEstimate == 12 || flightActual - flightEstimate == 11 || flightActual - flightEstimate == 10 || flightActual - flightEstimate == 9 || flightActual - flightEstimate == 8 || flightActual - flightEstimate == 7 || flightActual - flightEstimate == 6 || flightActual - flightEstimate == 5 || flightActual - flightEstimate == 4 || flightActual - flightEstimate == 3 || flightActual - flightEstimate == 2 || flightActual - flightEstimate == 1 || flightActual - flightEstimate == 0) // This means that if there is a difference between fa and fe of 2 or less its an acceptable path
+                if (flightActual - flightEstimate == 13 || flightActual - flightEstimate == 12 || flightActual - flightEstimate == 11 || flightActual - flightEstimate == 10 || flightActual - flightEstimate == 9 || flightActual - flightEstimate == 8 || flightActual - flightEstimate == 7 || flightActual - flightEstimate == 6 || flightActual - flightEstimate == 5 || flightActual - flightEstimate == 4 || flightActual - flightEstimate == 3 || flightActual - flightEstimate == 2 || flightActual - flightEstimate == 1 || flightActual - flightEstimate == 0) 
 
                 {
                     sameNumber = 1;
@@ -177,7 +222,7 @@ namespace COREPORTFOLIOTEST
                 flightTimeCalculation = (flightEstimate + 17);
                 flightTimeCalculation2 = (flightActual - flightTimeCalculation);
 
-                if (flightActual - flightEstimate == 17 || flightActual - flightEstimate == 16 || flightActual - flightEstimate == 15 || flightActual - flightEstimate == 14 || flightActual - flightEstimate == 13 || flightActual - flightEstimate == 12 || flightActual - flightEstimate == 11 || flightActual - flightEstimate == 10 || flightActual - flightEstimate == 9 || flightActual - flightEstimate == 8 || flightActual - flightEstimate == 7 || flightActual - flightEstimate == 6 || flightActual - flightEstimate == 5 || flightActual - flightEstimate == 4 || flightActual - flightEstimate == 3 || flightActual - flightEstimate == 2 || flightActual - flightEstimate == 1 || flightActual - flightEstimate == 0) // This means that if there is a difference between fa and fe of 2 or less its an acceptable path
+                if (flightActual - flightEstimate == 17 || flightActual - flightEstimate == 16 || flightActual - flightEstimate == 15 || flightActual - flightEstimate == 14 || flightActual - flightEstimate == 13 || flightActual - flightEstimate == 12 || flightActual - flightEstimate == 11 || flightActual - flightEstimate == 10 || flightActual - flightEstimate == 9 || flightActual - flightEstimate == 8 || flightActual - flightEstimate == 7 || flightActual - flightEstimate == 6 || flightActual - flightEstimate == 5 || flightActual - flightEstimate == 4 || flightActual - flightEstimate == 3 || flightActual - flightEstimate == 2 || flightActual - flightEstimate == 1 || flightActual - flightEstimate == 0) 
 
                 {
                     sameNumber = 1;
@@ -189,12 +234,7 @@ namespace COREPORTFOLIOTEST
                 }
             }
 
-
-
             // to large path
-
-
-
 
             if (flightEstimate <= 29 && flightEstimate >= flightActual)
             {
@@ -335,8 +375,8 @@ namespace COREPORTFOLIOTEST
     }
 }
 
-
-
+// Test Plan
+// testing for all possible values
 
 //MOE = 1 Test Estimate: 2 Actual: 3 = Acceptable (WORKS)
 //MOE = 1 Test Estimate: 3 Actual: 3 = Acceptable (WORKS)
@@ -391,3 +431,7 @@ namespace COREPORTFOLIOTEST
 //MOE = 6 Test Estimate: 135 Actual: 130 = Acceptable  (difference of 5) (Works) 
 //MOE = 6 Test Estimate: 136 Actual: 130 = Acceptable  (difference of 6) (Works) 
 //MOE = 6 Test Estimate: 137 Actual: 130 = to large by 1  (difference of 7) (WORKS) 
+
+// etc 
+
+// the rest of the code tests were succesful 
