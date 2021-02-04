@@ -68,6 +68,24 @@ namespace COREPORTFOLIOTEST
             //MOE = 4 Test Estimate: 95 Actual: 90 = Too Large by 1 (WORKS) 
             //MOE = 4 test Estimate: 90 Actual: 95 = Too Small by 1 (WORKS)
 
+            //MOE = 6 Test Estimate: 130 Actual: 130 = Acceptable  (difference of 0) (WORKS) 
+            //MOE = 6 Test Estimate: 130 Actual: 131 = Acceptable  (difference of 1) (WORKS) 
+            //MOE = 6 Test Estimate: 130 Actual: 132 = Acceptable  (difference of 2) (WORKS) 
+            //MOE = 6 Test Estimate: 130 Actual: 133 = Acceptable  (difference of 3) (WORKS) 
+            //MOE = 6 Test Estimate: 130 Actual: 134 = Acceptable  (difference of 4) (WORKS) 
+            //MOE = 6 Test Estimate: 130 Actual: 135 = Acceptable  (difference of 5) (WORKS) 
+            //MOE = 6 Test Estimate: 130 Actual: 136 = Acceptable  (difference of 6) (WORKS) 
+            //MOE = 6 Test Estimate: 130 Actual: 137 = to small by 1  (difference of 7) (WORKS) 
+
+            //MOE = 6 Test Estimate: 130 Actual: 130 = Acceptable  (difference of 0) (WORKS) 
+            //MOE = 6 Test Estimate: 131 Actual: 130 = Acceptable  (difference of 1) (WORKS) 
+            //MOE = 6 Test Estimate: 132 Actual: 130 = Acceptable  (difference of 2) (WORKS) 
+            //MOE = 6 Test Estimate: 133 Actual: 130 = Acceptable  (difference of 3) (WORKS) 
+            //MOE = 6 Test Estimate: 134 Actual: 130 = Acceptable  (difference of 4) (WORKS) 
+            //MOE = 6 Test Estimate: 135 Actual: 130 = Acceptable  (difference of 5) (doesnt work) 
+            //MOE = 6 Test Estimate: 136 Actual: 130 = Acceptable  (difference of 6) (to big by 0 minute) 
+            //MOE = 6 Test Estimate: 137 Actual: 130 = to large by 1  (difference of 7) (WORKS) 
+
 
 
             if (flightEstimate <= 29 && flightEstimate <= flightActual) // if flight estimate is <= 29 & flightEstimate is <= Flight Actual. 
@@ -78,11 +96,11 @@ namespace COREPORTFOLIOTEST
                 if (flightTimeCalculation2 < 1) // This means estimated time is acceptable
                 {
                     sameNumber = 1; // Same number gets rid of estimated time is acceptable
-                    Console.WriteLine($"Estimated time is acceptable");
+                    Console.WriteLine($"\nEstimated time is acceptable");
                 }
                 else
                 {
-                    Console.WriteLine($"Estimated time too small by {flightTimeCalculation2} minutes\n");
+                    Console.WriteLine($"\nEstimated time too small by {flightTimeCalculation2} minutes\n");
                 }
             }
 
@@ -100,11 +118,11 @@ namespace COREPORTFOLIOTEST
 
                 {
                     sameNumber = 1;
-                    Console.WriteLine($"Estimated time is acceptable\n");
+                    Console.WriteLine($"\nEstimated time is acceptable\n");
                 }
                 else
                 {
-                    Console.WriteLine($"Estimated time too small by {flightTimeCalculation2} minutes\n");
+                    Console.WriteLine($"\nEstimated time too small by {flightTimeCalculation2} minutes\n");
                 }
             }
 
@@ -124,11 +142,11 @@ namespace COREPORTFOLIOTEST
 
                 {
                     sameNumber = 1;
-                    Console.WriteLine($"Estimated time is acceptable\n");
+                    Console.WriteLine($"\nEstimated time is acceptable\n");
                 }
                 else
                 {
-                    Console.WriteLine($"Estimated time too small by {flightTimeCalculation2} minutes\n");
+                    Console.WriteLine($"\nEstimated time too small by {flightTimeCalculation2} minutes\n");
                 }
             }
 
@@ -147,14 +165,35 @@ namespace COREPORTFOLIOTEST
 
                 {
                     sameNumber = 1;
-                    Console.WriteLine($"Estimated time is acceptable\n");
+                    Console.WriteLine($"\nEstimated time is acceptable\n");
                 }
                 else
                 {
-                    Console.WriteLine($"Estimated time too small by {flightTimeCalculation2} minutes\n");
+                    Console.WriteLine($"\nEstimated time too small by {flightTimeCalculation2} minutes\n");
                 }
             }
 
+
+
+
+
+            else if (flightEstimate >= 120 && flightEstimate <= 179 && flightEstimate <= flightActual) // 120 > x < 179 Small or equal path
+
+            {
+                flightTimeCalculation = (flightEstimate + 6);
+                flightTimeCalculation2 = (flightActual - flightTimeCalculation);
+
+                if (flightActual - flightEstimate == 6 || flightActual - flightEstimate == 5 || flightActual - flightEstimate == 4 || flightActual - flightEstimate == 3 || flightActual - flightEstimate == 2 || flightActual - flightEstimate == 1 || flightActual - flightEstimate == 0) // This means that if there is a difference between fa and fe of 2 or less its an acceptable path
+
+                {
+                    sameNumber = 1;
+                    Console.WriteLine($"\nEstimated time is acceptable\n");
+                }
+                else
+                {
+                    Console.WriteLine($"\nEstimated time too small by {flightTimeCalculation2} minutes\n");
+                }
+            }
 
 
 
@@ -167,11 +206,11 @@ namespace COREPORTFOLIOTEST
 
                 if (flightTimeCalculation2 < 1 && sameNumber == 0)
                 {
-                    Console.WriteLine($"Estimated time is acceptable\n");
+                    Console.WriteLine($"\nEstimated time is acceptable\n");
                 }
                 else if (flightTimeCalculation2 >= 1)
                 {
-                    Console.WriteLine($"Estimated time too large by {flightTimeCalculation2} minutes \n");
+                    Console.WriteLine($"\nEstimated time too large by {flightTimeCalculation2} minutes \n");
                 }
             }
 
@@ -185,11 +224,11 @@ namespace COREPORTFOLIOTEST
 
                 if (flightActual - flightEstimate == 2 || flightActual - flightEstimate == -2 || flightActual - flightEstimate == 1 || flightActual - flightEstimate == -1 || flightActual - flightEstimate == 0 && sameNumber == 0)
                 {
-                    Console.WriteLine($"Estimated time is acceptable\n");
+                    Console.WriteLine($"\nEstimated time is acceptable\n");
                 }
                 else if (flightTimeCalculation >= 2)
                 {
-                    Console.WriteLine($"Estimated time too large by {flightTimeCalculation2} minutes\n");
+                    Console.WriteLine($"\nEstimated time too large by {flightTimeCalculation2} minutes\n");
                 }
 
             }
@@ -205,11 +244,11 @@ namespace COREPORTFOLIOTEST
 
                 if (flightActual - flightEstimate == 3 || flightActual - flightEstimate == -3 || flightActual - flightEstimate == 2 || flightActual - flightEstimate == -2 || flightActual - flightEstimate == 1 || flightActual - flightEstimate == -1 || flightActual - flightEstimate == 0 && sameNumber == 0)
                 {
-                    Console.WriteLine($"Estimated time is acceptable\n");
+                    Console.WriteLine($"\nEstimated time is acceptable\n");
                 }
                 else if (flightTimeCalculation >= 3)
                 {
-                    Console.WriteLine($"Estimated time too large by {flightTimeCalculation2} minutes\n");
+                    Console.WriteLine($"\nEstimated time too large by {flightTimeCalculation2} minutes\n");
                 }
             }
 
@@ -225,11 +264,28 @@ namespace COREPORTFOLIOTEST
 
                 if (flightActual - flightEstimate == 4 || flightActual - flightEstimate == -4 || flightActual - flightEstimate == 3 || flightActual - flightEstimate == -3 || flightActual - flightEstimate == 2 || flightActual - flightEstimate == -2 || flightActual - flightEstimate == 1 || flightActual - flightEstimate == -1 || flightActual - flightEstimate == 0 && sameNumber == 0)
                 {
-                    Console.WriteLine($"Estimated time is acceptable\n");
+                    Console.WriteLine($"\nEstimated time is acceptable\n");
                 }
                 else if (flightTimeCalculation >= 4)
                 {
-                    Console.WriteLine($"Estimated time too large by {flightTimeCalculation2} minutes\n");
+                    Console.WriteLine($"\nEstimated time too large by {flightTimeCalculation2} minutes\n");
+                }
+            }
+
+
+
+            else if (flightEstimate >= 120 && flightEstimate <= 179 && flightEstimate >= flightActual)
+            {
+                flightTimeCalculation = (flightEstimate - flightActual);
+                flightTimeCalculation2 = (flightTimeCalculation - 6);
+
+                if (flightActual - flightEstimate == 6 || flightActual - flightEstimate == -6 || flightActual - flightEstimate == 5 || flightActual - flightEstimate == -5 || flightActual - flightEstimate == 4 || flightActual - flightEstimate == -4 || flightActual - flightEstimate == 3 || flightActual - flightEstimate == -3 || flightActual - flightEstimate == 2 || flightActual - flightEstimate == -2 || flightActual - flightEstimate == 1 || flightActual - flightEstimate == -1 || flightActual - flightEstimate == 0 && sameNumber == 0)
+                {
+                    Console.WriteLine($"\nEstimated time is acceptable\n");
+                }
+                else if (flightTimeCalculation >= 6)
+                {
+                    Console.WriteLine($"\nEstimated time too large by {flightTimeCalculation2} minutes\n");
                 }
             }
 
